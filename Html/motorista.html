@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head></head>
+    <body>
+        <fieldset>
+            <form class="Form"method="post" action="../JavaScript/motorista.php">
+                <label class = "label" for="nome">Nome</label><!-- Retirar o class label se o css funcionar escolhendo uma classe-->
+                    <input type = "text" name="nome"/><br/><br/>
+                <label for="data">Data de nascimento</label>
+                    <input type = "date" name="dt_nascimento"/><br/><br/>
+                <label for="cpf">CPF</label>
+                    <input type = "text" name="cpf"/><br/><br/>
+                <label for="modelo_car">Modelo do carro</label>
+                    <input type = "text" name="modelo_car"/><br/><br/>
+                <label for="status">Status</label>
+                    <select name="status">
+                        <option value="1">Ativo</option>
+                        <option value="0">Inativo</option>
+                    </select><br/><br/>
+                <label for="sexo">Sexo</label>
+                    <select name="sexo">
+                        <option value="M">Masculino</option>
+                        <option value="F">Feminino</option>
+                    </select><br/><br/>
+            </form>
+        </fieldset>
+    </body>
+</html>
