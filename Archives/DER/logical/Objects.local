@@ -1,0 +1,8 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<oracle.dbtools.crest.model.design.logical.LogicalDesign>
+   <object objectType="Entity" objectID="9F0C90F0-791E-797B-D1FC-00D50571C2B0" name="CORRIDAS" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Entity" propertyParentId="E5C7D1F7-ABF9-CFDB-1CB3-5D5B62472590" propertySourceId="" propertyTargetId=""/>
+   <object objectType="Entity" objectID="8A17B7E5-F1C0-644A-AF16-1E4C22823F5E" name="MOTORISTAS" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Entity" propertyParentId="E5C7D1F7-ABF9-CFDB-1CB3-5D5B62472590" propertySourceId="" propertyTargetId=""/>
+   <object objectType="Entity" objectID="ACF3B234-35A0-A1B7-C56B-65630537DAD9" name="PASSAGEIROS" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Entity" propertyParentId="E5C7D1F7-ABF9-CFDB-1CB3-5D5B62472590" propertySourceId="" propertyTargetId=""/>
+   <object objectType="Relation" objectID="7DA0D84E-5BE1-597B-968C-62E0FA402133" name="Relation_14" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Relation" propertyParentId="E5C7D1F7-ABF9-CFDB-1CB3-5D5B62472590" propertySourceId="8A17B7E5-F1C0-644A-AF16-1E4C22823F5E" propertyTargetId="ACF3B234-35A0-A1B7-C56B-65630537DAD9"/>
+   <object objectType="Relation" objectID="B51F1804-668F-8D36-24BC-66B8AF0590CF" name="Relation_15" seqName="seg_0" propertyClassName="oracle.dbtools.crest.model.design.logical.Relation" propertyParentId="E5C7D1F7-ABF9-CFDB-1CB3-5D5B62472590" propertySourceId="8A17B7E5-F1C0-644A-AF16-1E4C22823F5E" propertyTargetId="9F0C90F0-791E-797B-D1FC-00D50571C2B0"/>
+</oracle.dbtools.crest.model.design.logical.LogicalDesign>

@@ -1,0 +1,8 @@
+http://aws-website-wwwdanielk-testecom-sy5zw.s3-website-us-east-1.amazonaws.com/
+SID & Database Name : ClientT or dbclienttest
+user sa 
+pass 11051998
+PORT 1521
+DNS: www.danielk-test.tk
+
+clientTDB

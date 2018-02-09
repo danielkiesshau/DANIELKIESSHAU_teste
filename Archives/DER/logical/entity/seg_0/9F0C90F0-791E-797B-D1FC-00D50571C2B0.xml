@@ -1,0 +1,73 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="9F0C90F0-791E-797B-D1FC-00D50571C2B0" name="CORRIDAS">
+<createdBy>Daniel</createdBy>
+<createdTime>2018-02-08 18:21:04 UTC</createdTime>
+<ownerDesignName>DER</ownerDesignName>
+<engineerTo>
+<item key="2B0EE5B8-76E4-BC7F-8611-7DDFA3C64726" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_corrida" id="2FB79476-5DAF-FE35-876D-33C7A2486AAB">
+<createdBy>Daniel</createdBy>
+<createdTime>2018-02-08 18:21:09 UTC</createdTime>
+<ownerDesignName>DER</ownerDesignName>
+<engineerTo>
+<item key="2B0EE5B8-76E4-BC7F-8611-7DDFA3C64726" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="vl_corrida" id="65A191AE-39A3-56A2-70DD-D7118E96D07A">
+<createdBy>Daniel</createdBy>
+<createdTime>2018-02-08 18:21:19 UTC</createdTime>
+<ownerDesignName>DER</ownerDesignName>
+<engineerTo>
+<item key="2B0EE5B8-76E4-BC7F-8611-7DDFA3C64726" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT021</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<dataTypeScale>2</dataTypeScale>
+<ownDataTypeParameters>,2,2</ownDataTypeParameters>
+</Attribute>
+<Attribute name="id_motorista" id="0FD1BCCF-57F7-C33F-0CFE-8973AFA57E58">
+<createdBy>Daniel</createdBy>
+<createdTime>2018-02-08 18:39:12 UTC</createdTime>
+<generatorID>B51F1804-668F-8D36-24BC-66B8AF0590CF</generatorID>
+<ownerDesignName>DER</ownerDesignName>
+<engineerTo>
+<item key="2B0EE5B8-76E4-BC7F-8611-7DDFA3C64726" value="true"/>
+</engineerTo>
+<referedAttribute>6A4C12F2-D4BE-65B9-98A3-EE33BEE35213</referedAttribute>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="0F600689-0ED0-A446-2695-1A17ACE68921" name="CORRIDAS PK">
+<createdBy>Daniel</createdBy>
+<createdTime>2018-02-08 18:21:18 UTC</createdTime>
+<ownerDesignName>DER</ownerDesignName>
+<engineerTo>
+<item key="2B0EE5B8-76E4-BC7F-8611-7DDFA3C64726" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>2FB79476-5DAF-FE35-876D-33C7A2486AAB</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

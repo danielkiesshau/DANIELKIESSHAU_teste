@@ -1,0 +1,135 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="8A17B7E5-F1C0-644A-AF16-1E4C22823F5E" name="MOTORISTAS">
+<createdBy>Daniel</createdBy>
+<createdTime>2018-02-08 18:14:56 UTC</createdTime>
+<ownerDesignName>DER</ownerDesignName>
+<engineerTo>
+<item key="2B0EE5B8-76E4-BC7F-8611-7DDFA3C64726" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id_motorista" id="6A4C12F2-D4BE-65B9-98A3-EE33BEE35213">
+<createdBy>Daniel</createdBy>
+<createdTime>2018-02-08 18:15:11 UTC</createdTime>
+<ownerDesignName>DER</ownerDesignName>
+<engineerTo>
+<item key="2B0EE5B8-76E4-BC7F-8611-7DDFA3C64726" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT011</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="nome" id="13FFBF3E-FFA4-02BF-51CE-5228B761D3BD">
+<createdBy>Daniel</createdBy>
+<createdTime>2018-02-08 18:15:21 UTC</createdTime>
+<ownerDesignName>DER</ownerDesignName>
+<engineerTo>
+<item key="2B0EE5B8-76E4-BC7F-8611-7DDFA3C64726" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>100 CHAR</dataTypeSize>
+<ownDataTypeParameters>100 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cpf" id="143F6513-A4C3-407C-7AE7-7929BBD62B11">
+<createdBy>Daniel</createdBy>
+<createdTime>2018-02-08 18:19:32 UTC</createdTime>
+<ownerDesignName>DER</ownerDesignName>
+<engineerTo>
+<item key="2B0EE5B8-76E4-BC7F-8611-7DDFA3C64726" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20 CHAR</dataTypeSize>
+<ownDataTypeParameters>20 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="dt_nascimento" id="5B1EF853-EFB0-8A70-80F2-7A984C414466">
+<createdBy>Daniel</createdBy>
+<createdTime>2018-02-08 18:15:37 UTC</createdTime>
+<ownerDesignName>DER</ownerDesignName>
+<engineerTo>
+<item key="2B0EE5B8-76E4-BC7F-8611-7DDFA3C64726" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT007</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="model_carro" id="90CBAB26-1DEF-6CB0-8F92-84024314CE86">
+<createdBy>Daniel</createdBy>
+<createdTime>2018-02-08 18:15:37 UTC</createdTime>
+<ownerDesignName>DER</ownerDesignName>
+<engineerTo>
+<item key="2B0EE5B8-76E4-BC7F-8611-7DDFA3C64726" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>50 CHAR</dataTypeSize>
+<ownDataTypeParameters>50 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="status" id="A6FA662C-6442-413C-1720-CE60A83B0D82">
+<createdBy>Daniel</createdBy>
+<createdTime>2018-02-08 18:15:37 UTC</createdTime>
+<ownerDesignName>DER</ownerDesignName>
+<engineerTo>
+<item key="2B0EE5B8-76E4-BC7F-8611-7DDFA3C64726" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>25 CHAR</dataTypeSize>
+<ownDataTypeParameters>25 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="sexo" id="96CA1637-FB8D-97A8-0AC2-A37C770D9477">
+<createdBy>Daniel</createdBy>
+<createdTime>2018-02-08 18:15:37 UTC</createdTime>
+<ownerDesignName>DER</ownerDesignName>
+<engineerTo>
+<item key="2B0EE5B8-76E4-BC7F-8611-7DDFA3C64726" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT025</logicalDatatype>
+<dataTypeSize>1 CHAR</dataTypeSize>
+<ownDataTypeParameters>1 CHAR,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="ativo" id="47DD6CFC-044C-2316-992E-9BCB764DA54B">
+<createdBy>Daniel</createdBy>
+<createdTime>2018-02-08 18:22:02 UTC</createdTime>
+<ownerDesignName>DER</ownerDesignName>
+<engineerTo>
+<item key="2B0EE5B8-76E4-BC7F-8611-7DDFA3C64726" value="true"/>
+</engineerTo>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT034</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="42F70012-909E-5D69-E3BB-D569AC2AC653" name="MOTORISTAS PK">
+<createdBy>Daniel</createdBy>
+<createdTime>2018-02-08 18:15:28 UTC</createdTime>
+<ownerDesignName>DER</ownerDesignName>
+<engineerTo>
+<item key="2B0EE5B8-76E4-BC7F-8611-7DDFA3C64726" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>6A4C12F2-D4BE-65B9-98A3-EE33BEE35213</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
