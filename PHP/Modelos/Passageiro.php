@@ -14,7 +14,7 @@ class Passageiro{
         $this->nome = $nome;
         $this->dt_nascimento = $dt_nascimento;
         $this->cpf = $cpf;
-        $this->id_motorista = $id_motorista;;
+        $this->id_motorista = $id_motorista;
         $this->sexo = $sexo;
      
     }
@@ -61,15 +61,10 @@ class Passageiro{
 
     public function insertPassageiro(){
     try{
-          echo '<br/>'.$this->getNome().'<br/>';
-        echo $this->getDt_Nascimento().'<br/>';
-        echo $this->getCPF().'<br/>';
-        echo $this->getSexo().'<br/>';
-         echo $this->getIdMotorista().'<br/>';
         
         $sql = new Sql(); 
   
-        //Inserção , ARRUMAR INSERT CTRL C CTRL V
+        //Inserção 
         $sql->query("INSERT INTO PASSAGEIROS(nome, dt_nascimento, cpf, sexo, id_motorista) VALUES(:nome, :dt_nascimento, :cpf, :sexo, :id_motorista)",array(
             ':nome' => $this->getNome(),
             ':dt_nascimento' => $this->getDt_Nascimento(),

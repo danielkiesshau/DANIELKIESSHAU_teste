@@ -65,9 +65,12 @@ class Motorista{
 function init(){
     var motorista = new Motorista();
     //Passagem de variáveis para .php enviar ao banco
-    window.location.href= 'http://www.danielk-teste.cf/Paginas/PHP/motorista.php?nome='+motorista.getNome()
+    window.location.href= 'http://localhost/Projeto/Paginas/PHP/motorista.php?nome='+motorista.getNome()
     +"&dt_nascimento="+motorista.getDataNasc()+"&cpf="+motorista.getCPF()+"&modelo_car="+motorista.getModeloCar()+"&status="+motorista.getStatus()+"&sexo="+motorista.getSexo();
+    return false;
 }
+
+
 
 
 

@@ -57,6 +57,6 @@ class Passageiro{
 function init(){
     var passageiro = new Passageiro();
     //Passagem de variáveis para .php enviar ao banco
-    window.location.href = 'http://www.danielk-teste.cf/Paginas/PHP/passageiro.php?nome='+passageiro.getNome()+"&dt_nascimento="+passageiro.getDataNasc()+"&cpf="+passageiro.getCPF()+"&nome-motorista="+passageiro.getNomeMotorista()+"&sexo="+passageiro.getSexo();
+    window.location.href = 'http://localhost/Projeto/Paginas/PHP/passageiro.php?nome='+passageiro.getNome()+"&dt_nascimento="+passageiro.getDataNasc()+"&cpf="+passageiro.getCPF()+"&nome-motorista="+passageiro.getNomeMotorista()+"&sexo="+passageiro.getSexo();
     return false;
 }
