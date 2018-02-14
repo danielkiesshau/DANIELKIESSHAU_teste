@@ -6,6 +6,7 @@ function update(){
         
     };
     var update = $_GET('update');
+    
     //Getting the type of file 
     var url = window.location.href ;
     var tipo = url.substr(-15,10);
@@ -36,8 +37,8 @@ function update(){
             if(localStorage.getItem('obj') != null){
                 //Retrieve JSON  with the result of the query in the passageiro.php 
                 var localObj = JSON.parse(localStorage.getItem('obj'));
+                
                 //Adding the names to the UI with Loop for all registers available
-
                 for(var i = 0 ; i < localObj.length ; i++){     
                     html = '<option value ="%nome%">%nome2%</option>';
                     newHTML = html.replace('%nome%',localObj[i].nome);

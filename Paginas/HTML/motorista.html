@@ -5,7 +5,7 @@
     <body>
         <fieldset>
             <form class="Form" method="GET">
-                <label class = "label" for="nome">Nome</label><!-- Retirar o class label se o css funcionar escolhendo uma classe -->
+                <label class = "label" for="nome">Nome</label>
                     <input type = "text" id="nome"/><br/><br/>
                 <label for="data">Data de nascimento</label>
                     <input type = "date" id="dt_nascimento"/><br/><br/>
@@ -24,10 +24,13 @@
                         <option value="M">Masculino</option>
                         <option value="F">Feminino</option>
                     </select><br/><br/>
-                <button type="submit" value="Enviar" id="enviar" onclick="return init();">Enviar</button>
-                
-             
+                <button type="submit" value="Enviar" id="enviar" onClick="return init();">Enviar</button>
+                <button type="submit" value="Listar" id="listar" onClick="return list();">Listar Motoristas</button>
+                <button type="submit" value="Update" id ="update" onClick="return updateM();">Atualizar motorista</button>  
             </form>
+            <div class="tabela-motoristas" >
+                    
+            </div>
         </fieldset>
         <script type="text/javascript" src ="..\..\JavaScript\motorista.js" ></script>
      

@@ -27,8 +27,8 @@ echo $tipo;
         
         
         var tipo = $("#tipo").html();
+        //Redirecting to passageiro.html
         if(tipo == 'passageiro'){
-            //Redirecting to passageiro.html
             window.location.href="http://localhost/Projeto/Paginas/HTML/passageiro.html?update=1";
         }else if(tipo == 'corrida'){
             window.location.href="http://localhost/Projeto/Paginas/HTML/corrida.html?update=1";
