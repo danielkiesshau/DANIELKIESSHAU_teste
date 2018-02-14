@@ -5,6 +5,8 @@ $sql = new Sql();
 $rs = $sql->select("SELECT nome FROM MOTORISTAS WHERE sstatus = :STATUS",array(":STATUS"=>1));
 $data = json_encode($rs);
 echo $data;
+$tipo = $_GET['tipo'];
+echo $tipo;
 ?>
 
 <script src="../lib/jquery-1.11.1.js"></script>
@@ -21,8 +23,18 @@ echo $data;
         //Store
         localStorage.setItem('obj', JSON.stringify(objJson));
         
-        //Redirecting to passageiro.html
-        window.location.href="http://localhost/Projeto/Paginas/HTML/passageiro.html?update=1";
+        
+        
+        
+        var tipo = $("#tipo").html();
+        if(tipo == 'passageiro'){
+            //Redirecting to passageiro.html
+            window.location.href="http://localhost/Projeto/Paginas/HTML/passageiro.html?update=1";
+        }else if(tipo == 'corrida'){
+            window.location.href="http://localhost/Projeto/Paginas/HTML/corrida.html?update=1";
+        }else{
+           window.location.href="http://localhost/Projeto/index.html"; 
+        }
 
     });
 </script>
@@ -32,5 +44,6 @@ echo $data;
 <head></head>
 <body>
     <div id="dadosPHP" style="display:none;"><?php echo $data?></div>
+    <div id="tipo" style="display:none;"><?php echo $tipo?></div>
 </body>
 </html>

@@ -2,8 +2,12 @@
 class Corrida{
 
     constructor(){
-        this.vl_corrida = document.getElementById("vl-corrida").value;
-        this.nome_motorista = document.getElementById("nome-motorista").value; 
+        //In case the user insert a float with ',' instead of '.'
+        var str = document.getElementById("vl-corrida").value + "";
+        var res = str.replace(',','.')
+        
+        this.vl_corrida = res;
+        this.nome_motorista = document.getElementById("options").value; 
 
     }
     
@@ -27,7 +31,14 @@ class Corrida{
 
 function init(){
     var corrida = new Corrida();
-    //Passagem de variáveis para .php enviar ao banco
-    window.location.href = 'http://localhost/Projeto/Paginas/PHP/corrida.php?vl_corrida='+corrida.getVlCorrida()+"&nome-motorista="+corrida.getNomeMotorista();
+    
+    if(corrida.getNomeMotorista().localeCompare("Escolha um motorista") != 0 && corrida.getVlCorrida() != ""){
+        //Passing variable via URL to insert in the DB
+        window.location.href = 'http://localhost/Projeto/Paginas/PHP/corrida.php?vl_corrida='+corrida.getVlCorrida()+"&nome-motorista="+corrida.getNomeMotorista();
+    }else{
+        alert("Escolha/Escreva nos campos não selecionados ou vazios");
+    }
+    
     return false;
+    
 }

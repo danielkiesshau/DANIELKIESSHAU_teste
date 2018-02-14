@@ -5,9 +5,6 @@ require_once(__DIR__."/../../PHP/config.php");
 require_once(__DIR__."/../../PHP/Sql.php");
 $sql = new Sql();
 
-//This will result in a query of active drivers to pass to the JS to update the UI
-$rs = $sql->select("SELECT nome FROM MOTORISTAS WHERE sstatus = :STATUS",array(":STATUS"=>1));
-$data = json_encode($rs);
 
 //Access database to get the id of the name informed by the passageiro.html
 $nome_motorista = $_GET['nome-motorista'];

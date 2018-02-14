@@ -6,11 +6,30 @@ function update(){
         
     };
     var update = $_GET('update');
+    //Getting the type of file 
+    var url = window.location.href ;
+    var tipo = url.substr(-15,10);
+    
+    //Checking if we are using passageiro.html or corrida.html to determine the href location
+    if(tipo == 'passageiro'){
+        
+    }else{
+        tipo = url.substr(-12,7);
+        
+    }
+    
+    
+    
     if(update == ""){
         if(localStorage.getItem('obj') != null){
             localStorage.removeItem('obj');
         }
-        window.location.href="http://localhost/Projeto/PHP/update.php";
+        if(tipo == 'passageiro'){
+            window.location.href="http://localhost/Projeto/PHP/update.php?tipo=passageiro";
+        }else if(tipo == 'corrida'){
+            window.location.href="http://localhost/Projeto/PHP/update.php?tipo=corrida";
+        }
+        
     }else{
         function load(){
             var html,newHTML; 

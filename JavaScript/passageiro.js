@@ -57,7 +57,7 @@ function init(){
     var passageiro = new Passageiro();  
 
     if(passageiro.getNomeMotorista().localeCompare("Escolha um motorista") != 0 && passageiro.getSexo().localeCompare("Escolha um genero") != 0 && passageiro.getDataNasc() != "" && passageiro.getNome() != "" && passageiro.getCPF() != ""){
-        //Passagem de variáveis para .php enviar ao banco
+        //Passing variable via URL to insert in the DB
         window.location.href = 'http://localhost/Projeto/Paginas/PHP/passageiro.php?nome='+passageiro.getNome()+"&dt_nascimento="+passageiro.getDataNasc()+"&cpf="+passageiro.getCPF()+"&nome-motorista="+passageiro.getNomeMotorista()+"&sexo="+passageiro.getSexo();
     }else{
         alert("Escolha/Escreva nos campos não selecionados ou vazios");

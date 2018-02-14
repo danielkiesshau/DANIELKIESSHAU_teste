@@ -39,13 +39,13 @@ class Corrida{
             ':id_motorista' => $this->getIdMotorista()
         ));
       
-        //Redirecionamento de página
+        //Redirecting to corrida.html
         header('Location: http://localhost/Projeto/Paginas/HTML/corrida.html'); 
         
     }catch(PDOException $e){
         echo '<br/>ERROR '.$e->getMessage().'<br/> Line:'.$e->getLine().'<br/>'.$e->getFile();
     }
-
+         echo '<br/>ERROR '.$e->getMessage().'<br/> Line:'.$e->getLine().'<br/>'.$e->getFile();
     }
     
     public function getListCorridas(){
