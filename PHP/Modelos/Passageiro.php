@@ -64,7 +64,7 @@ class Passageiro{
         
         $sql = new Sql(); 
   
-        //Inserção 
+        //Inserting in DB
         $sql->query("INSERT INTO PASSAGEIROS(nome, dt_nascimento, cpf, sexo, id_motorista) VALUES(:nome, :dt_nascimento, :cpf, :sexo, :id_motorista)",array(
             ':nome' => $this->getNome(),
             ':dt_nascimento' => $this->getDt_Nascimento(),
@@ -72,8 +72,8 @@ class Passageiro{
             ':id_motorista' => $this->getIdMotorista(),
             ':sexo' => $this->getSexo()
         ));
-      
-        //Redirecionamento de página
+        
+        //Redirecting to passageiro.html
         header('Location: http://localhost/Projeto/Paginas/HTML/passageiro.html'); 
         
     }catch(PDOException $e){

@@ -98,7 +98,7 @@ class Motorista{
 
         $rs = $sql->select("SELECT * FROM MOTORISTAS");
 
-        return json_encode($rs);
+        return $rs;
 
     }catch(PDOException $e){
         echo '<br/>ERROR '.$e->getMessage().'<br/> Line:'.$e->getLine().'<br/>'.$e->getFile();

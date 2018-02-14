@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html>
     <meta charset="UTF-8">
-    <head></head>
+    <head>
+        <link rel="stylesheet" type="text/css" href="../../Css/style.css">
+    </head>
     <body>
         <fieldset>
             <form class="Form" method="GET">
@@ -11,17 +13,23 @@
                     <input type = "date" id="dt_nascimento"/><br/><br/>
                 <label for="cpf">CPF</label>
                     <input type = "text" id="cpf"/><br/><br/>
-                <label for="nome-motorista">Motorista reponsável</label>
-                    <input type = "text" id="nome-motorista"/><br/><br/>
+                <label for="nome-motorista">Motorista disponível</label>
+                    <select id="options">
+                        <div >
+                            <option>Escolha um motorista</option>
+                        </div>
+                    </select><br/><br/>
                 <label for="sexo">Sexo</label>
                     <select id="sexo">
+                        <option>Escolha um genero</option>
                         <option value="M">Masculino</option>
                         <option value="F">Feminino</option>
                     </select><br/><br/>
                 <button type="submit" value="Enviar" id="enviar" onclick="return init();">Enviar</button>
             </form>
         </fieldset>
-        <script src ="..\..\JavaScript\passageiro.js" type="text/javascript" ></script>
-     
+        <script src ="../../JavaScript/passageiro.js" type="text/javascript" ></script>
+        <script  src="../../lib/jquery-1.11.1.js" type = "text/javascript"></script>
+        <script  src="../../JavaScript/uicontroller.js" type="text/javascript"></script> 
     </body>
 </html>

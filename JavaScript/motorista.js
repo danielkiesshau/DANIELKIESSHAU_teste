@@ -64,9 +64,11 @@ class Motorista{
 
 function init(){
     var motorista = new Motorista();
-    //Passagem de variáveis para .php enviar ao banco
-    window.location.href= 'http://localhost/Projeto/Paginas/PHP/motorista.php?nome='+motorista.getNome()
-    +"&dt_nascimento="+motorista.getDataNasc()+"&cpf="+motorista.getCPF()+"&modelo_car="+motorista.getModeloCar()+"&status="+motorista.getStatus()+"&sexo="+motorista.getSexo();
+    if(motorista.getModeloCar() != "" && motorista.getSexo().localeCompare("Escolha um genero") != 0 && motorista.getDataNasc() != "" && motorista.getNome() != "" && motorista.getCPF() != ""){
+        //Passagem de variáveis para .php enviar ao banco
+        window.location.href= 'http://localhost/Projeto/Paginas/PHP/motorista.php?nome='+motorista.getNome()
+        +"&dt_nascimento="+motorista.getDataNasc()+"&cpf="+motorista.getCPF()+"&modelo_car="+motorista.getModeloCar()+"&status="+motorista.getStatus()+"&sexo="+motorista.getSexo();
+    }
     return false;
 }
 

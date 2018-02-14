@@ -6,9 +6,11 @@
         <fieldset>
             <form class="Form" method="GET">
                 <label for="vl_corrida">Valor da corrida</label>
-                    <input type="number" id="vl-corrida"/><br/>
-                <label for="nome-motorista">Motorista reponsável</label>
-                    <input type = "text" id="nome-motorista"/><br/><br/>
+                    <input type="number" id="vl-corrida"/><br/><br/>
+                <label for="nome-motorista">Motorista disponível</label>
+                    <select id="nome-motorista">
+                        <option>Escolha um motorista</option>
+                    </select><br/><br/>
                 <button type="submit" value="Enviar" id="enviar" onclick="return init();">Enviar</button>
             </form>
         </fieldset>

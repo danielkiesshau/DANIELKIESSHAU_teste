@@ -22,6 +22,7 @@ class Corrida{
     setVlCorrida(vl_corrida){
         this.vl_corrida = vl_corrida;
     }
+
 }
 
 function init(){
