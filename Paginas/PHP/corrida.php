@@ -1,8 +1,9 @@
 <?php
-
+error_reporting(E_ALL);
+ini_set('display_errors', true);
 //Inclue classes de outros arquivos PHP
-require_once(__DIR__."/../../PHP/config.php");
-require_once(__DIR__."/../../PHP/Sql.php");
+require_once("../../PHP/Modelos/Corrida.php");
+require_once("../../PHP/Sql.php");
 $sql = new Sql();
 
 //Access database to get the id of the name informed by the corrida.html

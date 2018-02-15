@@ -56,8 +56,8 @@ function init(){
     var passageiro = new Passageiro();  
     //Verifying if the fields were filled
     if(passageiro.getNomeMotorista().localeCompare("Escolha um motorista") != 0 && passageiro.getSexo().localeCompare("Escolha um genero") != 0 && passageiro.getDataNasc() != "" && passageiro.getNome() != "" && passageiro.getCPF() != ""){
-        //Passing variable via URL to insert in the DB
-        window.location.href = 'http://localhost/Projeto/Paginas/PHP/passageiro.php?nome='+passageiro.getNome()+"&dt_nascimento="+passageiro.getDataNasc()+"&cpf="+passageiro.getCPF()+"&nome-motorista="+passageiro.getNomeMotorista()+"&sexo="+passageiro.getSexo();
+        //Passing variable via URL to insert in the DB 
+        window.location.href = 'https://whispering-eyrie-32116.herokuapp.com/Paginas/PHP/passageiro.php?nome='+passageiro.getNome()+"&dt_nascimento="+passageiro.getDataNasc()+"&cpf="+passageiro.getCPF()+"&nome-motorista="+passageiro.getNomeMotorista()+"&sexo="+passageiro.getSexo();
     }else{
         alert("Escolha/Escreva nos campos não selecionados ou vazios");
     }
@@ -65,7 +65,12 @@ function init(){
 }
 
 function list(){    
-    window.location.href= 'http://localhost/Projeto/PHP/Modelos/Passageiro.php?build-table=1';
+    window.location.href= 'https://whispering-eyrie-32116.herokuapp.com/PHP/Modelos/Passageiro.php?build-table=1';
+    return false;
+}
+
+function home(){
+    window.location.href= 'https://whispering-eyrie-32116.herokuapp.com/';
     return false;
 }
 
@@ -157,4 +162,20 @@ function list(){
     } 
     
 
+})();
+
+//function to alert in case of CPF existent
+(function sqlCheck(){
+    //function to get ONE parameter of the URL
+    function $_GET(q,s) {
+
+            s = (s) ? s : window.location.search;
+            var re = new RegExp('&amp;'+q+'=([^&amp;]*)','i');
+            return (s=s.replace(/^\?/,'&amp;').match(re)) ?s=s[1] :s='';
+
+    };
+    
+    if($_GET('error') == 1){
+        alert("CPF Existente!");
+    }
 })();

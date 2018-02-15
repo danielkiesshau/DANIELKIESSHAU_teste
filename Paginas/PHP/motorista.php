@@ -1,7 +1,8 @@
 <?php
-
+error_reporting(E_ALL);
+ini_set('display_errors', true);
 //Include other .php required files
-require_once(__DIR__."/../../PHP/config.php");
+require_once("../../PHP/Modelos/Motorista.php");
 if($_GET['update']== null){
     //Get data from the URL
     $motorista = getNewMotorista();

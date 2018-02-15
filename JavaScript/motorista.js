@@ -66,7 +66,7 @@ function init(){
     //Verifying if the fields were filled
     if(motorista.getModeloCar() != "" && motorista.getSexo().localeCompare("Escolha um genero") != 0 && motorista.getDataNasc() != "" && motorista.getNome() != "" && motorista.getCPF() != ""){
         //Passing variables to .php insert into the DB
-        window.location.href= 'http://localhost/Projeto/Paginas/PHP/motorista.php?nome='+motorista.getNome()
+        window.location.href= 'https://whispering-eyrie-32116.herokuapp.com/Paginas/PHP/motorista.php?nome='+motorista.getNome()
         +"&dt_nascimento="+motorista.getDataNasc()+"&cpf="+motorista.getCPF()+"&modelo_car="+motorista.getModeloCar()+"&status="+motorista.getStatus()+"&sexo="+motorista.getSexo();
     }else{
         alert("Preencha/Escolha todos os campos!");
@@ -75,7 +75,7 @@ function init(){
 }
 
 function list(){
-    window.location.href= 'http://localhost/Projeto/PHP/Modelos/Motorista.php?build-table=1?update=0';
+    window.location.href= 'https://whispering-eyrie-32116.herokuapp.com/PHP/Modelos/Motorista.php?build-table=1?update=0';
     return false;
 }
 
@@ -84,7 +84,7 @@ function updateM(){
     
     if(motorista.getModeloCar() != "" && motorista.getSexo().localeCompare("Escolha um genero") != 0 && motorista.getDataNasc() != "" && motorista.getNome() != "" && motorista.getCPF() != ""){
         //Passing variables to .php to insert into the DB
-        window.location.href= 'http://localhost/Projeto/Paginas/PHP/motorista.php?nome='+motorista.getNome() +"&dt_nascimento="+motorista.getDataNasc()+"&cpf="+motorista.getCPF()+"&modelo_car="+motorista.getModeloCar()+"&status="+motorista.getStatus()+"&sexo="+motorista.getSexo()+"&update=1";
+        window.location.href= 'https://whispering-eyrie-32116.herokuapp.com/Paginas/PHP/motorista.php?nome='+motorista.getNome() +"&dt_nascimento="+motorista.getDataNasc()+"&cpf="+motorista.getCPF()+"&modelo_car="+motorista.getModeloCar()+"&status="+motorista.getStatus()+"&sexo="+motorista.getSexo()+"&update=1";
     }else{
         alert("Preencha/Escolha todos os campos!");
     }
@@ -92,6 +92,10 @@ function updateM(){
     return false;
 }
 
+function home(){
+    window.location.href= 'https://whispering-eyrie-32116.herokuapp.com/';
+    return false;
+}
 
 (function tabela(){
     //Clearing possible old table
@@ -167,6 +171,22 @@ function updateM(){
 
 })();
 
+
+//function to alert in case of CPF existent
+(function sqlCheck(){
+    //function to get ONE parameter of the URL
+    function $_GET(q,s) {
+
+            s = (s) ? s : window.location.search;
+            var re = new RegExp('&amp;'+q+'=([^&amp;]*)','i');
+            return (s=s.replace(/^\?/,'&amp;').match(re)) ?s=s[1] :s='';
+
+    };
+    
+    if($_GET('error') == 1){
+        alert("CPF Existente!");
+    }
+})();
 
 
 

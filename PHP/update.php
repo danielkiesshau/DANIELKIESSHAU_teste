@@ -26,11 +26,11 @@ setcookie("tabela","1", time() + (400), "/");
         var tipo = $("#tipo").html();
         //Redirecting to passageiro.html
         if(tipo == 'passageiro'){
-            window.location.href="http://localhost/Projeto/Paginas/HTML/passageiro.html?update=1";
+            window.location.href="https://whispering-eyrie-32116.herokuapp.com/Paginas/HTML/passageiro.html?update=1";
         }else if(tipo == 'corrida'){
-            window.location.href="http://localhost/Projeto/Paginas/HTML/corrida.html?update=1";
+            window.location.href="https://whispering-eyrie-32116.herokuapp.com/Paginas/HTML/corrida.html?update=1";
         }else{
-            window.location.href="http://localhost/Projeto/index.html"; 
+            window.location.href="https://whispering-eyrie-32116.herokuapp.com/index.html"; 
         }
         
     });

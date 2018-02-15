@@ -1,5 +1,5 @@
 <?php
-require_once(__DIR__."/../Sql.php");
+require_once($_SERVER['DOCUMENT_ROOT']."/PHP/Sql.php");
 
 class Corrida{
     private $vl_corrida;
@@ -29,23 +29,24 @@ class Corrida{
     }  
    
     public function insertCorrida(){
-    try{
-          
-        $sql = new Sql(); 
-        echo $this->getIdMotorista();
-        //Inserção , 
-        $sql->query("INSERT INTO CORRIDAS(vl_corrida, id_motorista) VALUES(:vl_corrida, :id_motorista)",array(
-            ':vl_corrida' => $this->getVlCorrida(),
-            ':id_motorista' => $this->getIdMotorista()
-        ));
-      
-        //Redirecting to corrida.html
-        header('Location: http://localhost/Projeto/Paginas/HTML/corrida.html'); 
-        
-    }catch(PDOException $e){
-        echo '<br/>ERROR '.$e->getMessage().'<br/> Line:'.$e->getLine().'<br/>'.$e->getFile();
-    }
-         echo '<br/>ERROR '.$e->getMessage().'<br/> Line:'.$e->getLine().'<br/>'.$e->getFile();
+        try{
+
+            $sql = new Sql(); 
+            echo $this->getIdMotorista();
+            //Inserção , 
+            $sql->query("INSERT INTO CORRIDAS(vl_corrida, id_motorista) VALUES(:vl_corrida, :id_motorista)",array(
+                ':vl_corrida' => $this->getVlCorrida(),
+                ':id_motorista' => $this->getIdMotorista()
+            ));
+
+            //Redirecting to corrida.html
+            header('Location: https://whispering-eyrie-32116.herokuapp.com/Paginas/HTML/corrida.html?'); 
+
+        }catch(PDOException $e){
+            echo '<br/>ERROR '.$e->getMessage().'<br/> Line:'.$e->getLine().'<br/>'.$e->getFile();
+            //Redirecting to corrida.html
+            header('Location: https://whispering-eyrie-32116.herokuapp.com/Paginas/HTML/corrida.html?');
+        }
     }
     
     public static function getListCorridas(){
@@ -128,7 +129,7 @@ if(isset($_GET['build-table'])){
                 localStorage.setItem('nomes', JSON.stringify(namesJson));
 
             });
-            window.location.href="http://localhost/Projeto/Paginas/HTML/corrida.html?table=1";
+            window.location.href="https://whispering-eyrie-32116.herokuapp.com/Paginas/HTML/corrida.html?table=1";
         
     </script>
 </body>

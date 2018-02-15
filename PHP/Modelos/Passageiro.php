@@ -1,5 +1,5 @@
 <?php
-require_once(__DIR__."/../Sql.php");
+require_once($_SERVER['DOCUMENT_ROOT']."/PHP/Sql.php");
 
 class Passageiro{
     private $nome;
@@ -60,25 +60,27 @@ class Passageiro{
     }
 
     public function insertPassageiro(){
-    try{
-        
-        $sql = new Sql(); 
-  
-        //Inserting in DB
-        $sql->query("INSERT INTO PASSAGEIROS(nome, dt_nascimento, cpf, sexo, id_motorista) VALUES(:nome, :dt_nascimento, :cpf, :sexo, :id_motorista)",array(
-            ':nome' => $this->getNome(),
-            ':dt_nascimento' => $this->getDt_Nascimento(),
-            ':cpf' => $this->getCPF(),
-            ':id_motorista' => $this->getIdMotorista(),
-            ':sexo' => $this->getSexo()
-        ));
-        
-        //Redirecting to passageiro.html
-        header('Location: http://localhost/Projeto/Paginas/HTML/passageiro.html'); 
-        
-    }catch(PDOException $e){
-        echo '<br/>ERROR '.$e->getMessage().'<br/> Line:'.$e->getLine().'<br/>'.$e->getFile();
-    }
+        try{
+
+            $sql = new Sql(); 
+
+            //Inserting in DB
+            $sql->query("INSERT INTO PASSAGEIROS(nome, dt_nascimento, cpf, sexo, id_motorista) VALUES(:nome, :dt_nascimento, :cpf, :sexo, :id_motorista)",array(
+                ':nome' => $this->getNome(),
+                ':dt_nascimento' => $this->getDt_Nascimento(),
+                ':cpf' => $this->getCPF(),
+                ':id_motorista' => $this->getIdMotorista(),
+                ':sexo' => $this->getSexo()
+            ));
+
+            //Redirecting to passageiro.html
+            header('Location: https://whispering-eyrie-32116.herokuapp.com/Paginas/HTML/passageiro.html?error=0'); 
+
+        }catch(PDOException $e){
+            echo '<br/>ERROR '.$e->getMessage().'<br/> Line:'.$e->getLine().'<br/>'.$e->getFile();
+            //Redirecting to passageiro.html
+            header('Location: https://whispering-eyrie-32116.herokuapp.com/Paginas/HTML/passageiro.html?error=1'); 
+        }
 
     }
     
@@ -125,7 +127,7 @@ if(isset($_GET['build-table'])){
                 console.log(objJson);
                 //Store
                 localStorage.setItem('content', JSON.stringify(objJson));
-                window.location.href="http://localhost/Projeto/Paginas/HTML/passageiro.html?table=1";
+                window.location.href="https://whispering-eyrie-32116.herokuapp.com/Paginas/HTML/passageiro.html?table=1";
 
             });
         

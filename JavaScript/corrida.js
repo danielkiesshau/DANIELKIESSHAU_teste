@@ -33,7 +33,7 @@ function init(){
     
     if(corrida.getNomeMotorista().localeCompare("Escolha um motorista") != 0 && corrida.getVlCorrida() != ""){
         //Passing variable via URL to insert in the DB
-        window.location.href = 'http://localhost/Projeto/Paginas/PHP/corrida.php?vl_corrida='+corrida.getVlCorrida()+"&nome-motorista="+corrida.getNomeMotorista();
+        window.location.href = 'https://whispering-eyrie-32116.herokuapp.com/Paginas/PHP/corrida.php?vl_corrida='+corrida.getVlCorrida()+"&nome-motorista="+corrida.getNomeMotorista();
     }else{
         alert("Escolha/Escreva nos campos não selecionados ou vazios");
     }
@@ -43,7 +43,12 @@ function init(){
 }
 
 function list(){    
-    window.location.href= 'http://localhost/Projeto/PHP/Modelos/Corrida.php?build-table=1';
+    window.location.href= 'https://whispering-eyrie-32116.herokuapp.com/PHP/Modelos/Corrida.php?build-table=1';
+    return false;
+}
+
+function home(){
+    window.location.href= 'https://whispering-eyrie-32116.herokuapp.com/';
     return false;
 }
 

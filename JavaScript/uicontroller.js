@@ -26,10 +26,10 @@
             localStorage.removeItem('obj');
         }
         if(tipo == 'passageiro'){
-             
-            window.location.href="http://localhost/Projeto/PHP/update.php?tipo=passageiro";
-        }else if(tipo == 'corrida'){
-            window.location.href="http://localhost/Projeto/PHP/update.php?tipo=corrida";
+            console.log("enitre");
+            window.location.href="https://whispering-eyrie-32116.herokuapp.com/PHP/update.php?tipo=passageiro";
+        }else if(tipo == 'corrida'){//
+            window.location.href="https://whispering-eyrie-32116.herokuapp.com/PHP/update.php?tipo=corrida";
         }
         
     }else{
