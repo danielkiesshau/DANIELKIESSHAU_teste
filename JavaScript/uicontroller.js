@@ -1,4 +1,4 @@
-function update(){
+(function update(){
     function $_GET(q,s) {
         s = (s) ? s : window.location.search;
         var re = new RegExp('&amp;'+q+'=([^&amp;]*)','i');
@@ -8,16 +8,16 @@ function update(){
     var update = $_GET('update');
     
     //Getting the type of file 
-    var url = window.location.href ;
+    var url = window.location.href;
     var tipo = url.substr(-15,10);
-    
+
     //Checking if we are using passageiro.html or corrida.html to determine the href location
     if(tipo == 'passageiro'){
         
     }else{
         tipo = url.substr(-12,7);
-        
     }
+
     
     
     
@@ -26,13 +26,14 @@ function update(){
             localStorage.removeItem('obj');
         }
         if(tipo == 'passageiro'){
+             
             window.location.href="http://localhost/Projeto/PHP/update.php?tipo=passageiro";
         }else if(tipo == 'corrida'){
             window.location.href="http://localhost/Projeto/PHP/update.php?tipo=corrida";
         }
         
     }else{
-        function load(){
+        (function load(){
             var html,newHTML; 
             if(localStorage.getItem('obj') != null){
                 //Retrieve JSON  with the result of the query in the passageiro.php 
@@ -48,11 +49,9 @@ function update(){
             }
 
 
-        };
-        load();
+        })();
     }
-}
-update();
+})();
 
 
 

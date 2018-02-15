@@ -48,20 +48,88 @@ class Corrida{
          echo '<br/>ERROR '.$e->getMessage().'<br/> Line:'.$e->getLine().'<br/>'.$e->getFile();
     }
     
-    public function getListCorridas(){
-    try{
-        $sql = new Sql(); 
+    public static function getListCorridas(){
+        try{
+            $sql = new Sql(); 
 
-        $rs = $sql->select("SELECT * FROM CORRIDAS");
+            $rs = $sql->select("SELECT * FROM CORRIDAS");
+            
 
-        return json_encode($rs);
+            return $rs;
 
-    }catch(PDOException $e){
-        echo '<br/>ERROR '.$e->getMessage().'<br/> Line:'.$e->getLine().'<br/>'.$e->getFile();
+        }catch(PDOException $e){
+            echo '<br/>ERROR '.$e->getMessage().'<br/> Line:'.$e->getLine().'<br/>'.$e->getFile();
+        }
+
     }
     
+    public static function getMotoristas(){
+        try{
+            $sql = new Sql(); 
+
+            $nomes = $sql->select("SELECT * FROM MOTORISTAS");
+            
+
+            return $nomes;
+
+        }catch(PDOException $e){
+            echo '<br/>ERROR '.$e->getMessage().'<br/> Line:'.$e->getLine().'<br/>'.$e->getFile();
+        }
+        
     }
     
 }
 
+if(isset($_GET['build-table'])){
+    $rs = Corrida::getListCorridas(); 
+    //Get the names of the driver to conver the id_motorista to nome
+    $nomes = Corrida::getMotoristas();
+}
+
 ?>
+<!DOCTYPE html>
+<html>
+<meta charset='UTF-8'>
+<head></head>
+<body>
+    <div id="dadosPHP" style="display:none;"><?php if(isset($rs)){echo json_encode($rs);}?></div>
+    <div id="nomesPHP" style="display:none;"><?php if(isset($nomes)){echo json_encode($nomes);}?></div>
+    <script src="../../lib/jquery-1.11.1.js"></script>
+    <script type=text/javascript>
+    
+            //Clearing old JSON
+            if(localStorage.getItem('content') != null){
+                    localStorage.removeItem('content');
+            }
+        
+            //Get the data stored in dadosPHP 
+            $(document).ready(function(){
+
+                var objJson = $("#dadosPHP").html();
+             
+
+                //Store
+                localStorage.setItem('content', JSON.stringify(objJson));
+
+            });
+        
+            //Clearing old JSON
+            if(localStorage.getItem('nomes') != null){
+                    localStorage.removeItem('nomes');
+            }
+        
+            //Get the data stored in dadosPHP 
+            $(document).ready(function(){
+
+                var namesJson = $("#nomesPHP").html();
+                   console.log(namesJson);
+                
+                //Store
+                localStorage.setItem('nomes', JSON.stringify(namesJson));
+
+            });
+            window.location.href="http://localhost/Projeto/Paginas/HTML/corrida.html?table=1";
+        
+    </script>
+</body>
+</html>

@@ -117,18 +117,18 @@ class Motorista{
     }
     
     public static function getListMotoristas(){
-    try{
-        
-        $sql = new Sql(); 
+        try{
 
-        $rs = $sql->select("SELECT * FROM MOTORISTAS");
-        
-        return $rs;
+            $sql = new Sql(); 
 
-    }catch(PDOException $e){
-        echo '<br/>ERROR '.$e->getMessage().'<br/> Line:'.$e->getLine().'<br/>'.$e->getFile();
-    }
-    
+            $rs = $sql->select("SELECT * FROM MOTORISTAS");
+
+            return $rs;
+
+        }catch(PDOException $e){
+            echo '<br/>ERROR '.$e->getMessage().'<br/> Line:'.$e->getLine().'<br/>'.$e->getFile();
+        }
+
     }
     
     
@@ -148,7 +148,7 @@ if(isset($_GET['build-table'])){
 <meta charset='UTF-8'>
 <head></head>
 <body>
-    <div id="dadosPHP"><?php if(isset($rs)){ echo json_encode($rs);}?></div>
+    <div id="dadosPHP"><?php if(isset($rs)){echo json_encode($rs);}?></div>
     <div id="update"><?php if(isset($_GET['update'])){echo $_GET['update'];}?></div>
     <script src="../../lib/jquery-1.11.1.js"></script>
     <script type=text/javascript>

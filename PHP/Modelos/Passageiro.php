@@ -82,20 +82,56 @@ class Passageiro{
 
     }
     
-    public function getListPassageiros(){
-    try{
-        $sql = new Sql(); 
+    public static function getListPassageiros(){
+        try{
+            $sql = new Sql(); 
 
-        $rs = $sql->select("SELECT * FROM PASSAGEIROS");
+            $rs = $sql->select("SELECT * FROM PASSAGEIROS");
 
-        return json_encode($rs);
+            return $rs;
 
-    }catch(PDOException $e){
-        echo '<br/>ERROR '.$e->getMessage().'<br/> Line:'.$e->getLine().'<br/>'.$e->getFile();
-    }
+        }catch(PDOException $e){
+            echo '<br/>ERROR '.$e->getMessage().'<br/> Line:'.$e->getLine().'<br/>'.$e->getFile();
+        }
     
     }
     
 }
 
+if(isset($_GET['build-table'])){
+    $rs = Passageiro::getListPassageiros(); 
+}
+
 ?>
+<!DOCTYPE html>
+<html>
+<meta charset='UTF-8'>
+<head></head>
+<body>
+    <div id="dadosPHP" style="display:none;"><?php if(isset($rs)){echo json_encode($rs);}?></div>
+    <script src="../../lib/jquery-1.11.1.js"></script>
+    <script type=text/javascript>
+    
+            //Clearing old JSON
+            if(localStorage.getItem('content') != null){
+                    localStorage.removeItem('content');
+            }
+        
+            //Get the data stored in dadosPHP 
+            $(document).ready(function(){
+
+                var objJson = $("#dadosPHP").html();
+
+                console.log(objJson);
+                //Store
+                localStorage.setItem('content', JSON.stringify(objJson));
+                window.location.href="http://localhost/Projeto/Paginas/HTML/passageiro.html?table=1";
+
+            });
+        
+    </script>
+</body>
+</html>
+
+
+
