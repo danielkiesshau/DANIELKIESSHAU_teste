@@ -1,0 +1,81 @@
+body{
+    background-color:  #1a1b1d;
+}
+
+.header {
+    position: relative  ;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background-color: teal;
+    color: dark-b;
+    text-align: center;
+}
+
+.link{
+    font-size="10";
+    color:#1a1b1d;
+    font-weight: bold;
+}
+
+.link:hover{
+    color:white;
+    text-decoration: none;
+}
+
+#motorista{
+    width: 100px;
+    height: 100px;
+    background: teal; 
+    border-radius: 70px; 
+    border-radius: 70px; 
+    border-radius: 70px;
+    margin-top:20%;
+    margin-left:47.5%;
+    padding-top: 36px;
+    padding-bottom: 36px; 
+    padding-left:10px; 
+}
+
+
+#passageiro{
+    width: 100px;
+    height: 100px;
+    background: teal; 
+    border-radius: 70px; 
+    border-radius: 70px; 
+    border-radius: 70px;
+    margin-top:-12%;
+    margin-left:60%;
+    padding-top: 36px;
+    padding-bottom: 36px; 
+    padding-left:8px; 
+}
+
+#corrida{
+    width: 100px;
+    height: 100px;
+    background: teal; 
+    border-radius: 70px; 
+    border-radius: 70px; 
+    border-radius: 70px;
+    margin-top:-5%;
+    margin-left:35%;
+    padding-top: 38px;
+    padding-bottom: 38px; 
+    padding-left:20px; 
+}
+
+.footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: teal;
+    color: dark-b;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+
